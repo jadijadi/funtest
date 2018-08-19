@@ -32,7 +32,7 @@ function answerSubmitted(num){
         document.getElementById('answer3').style.visibility = "hidden";
         document.getElementById('answer4').style.visibility = "hidden";
         document.getElementById('message').style.display = "block";
-        document.getElementById('message').innerHTML = "Answer Submitted! Waiting on other players...";
+        document.getElementById('message').innerHTML = "جواب ثبت شد. منتظر بقیه بازیکنان";
         
     }
 }
@@ -48,11 +48,11 @@ socket.on('questionOver', function(data){
     if(correct == true){
         document.body.style.backgroundColor = "#4CAF50";
         document.getElementById('message').style.display = "block";
-        document.getElementById('message').innerHTML = "Correct!";
+        document.getElementById('message').innerHTML = "درست بود!";
     }else{
         document.body.style.backgroundColor = "#f94a1e";
         document.getElementById('message').style.display = "block";
-        document.getElementById('message').innerHTML = "Incorrect!";
+        document.getElementById('message').innerHTML = "اشتباه!";
     }
     document.getElementById('answer1').style.visibility = "hidden";
     document.getElementById('answer2').style.visibility = "hidden";
@@ -62,7 +62,7 @@ socket.on('questionOver', function(data){
 });
 
 socket.on('newScore', function(data){
-    document.getElementById('scoreText').innerHTML = "Score: " + data;
+    document.getElementById('scoreText').innerHTML = "امتیاز: " + data;
 });
 
 socket.on('nextQuestionPlayer', function(){
@@ -85,8 +85,8 @@ socket.on('hostDisconnect', function(){
 socket.on('playerGameData', function(data){
    for(var i = 0; i < data.length; i++){
        if(data[i].playerId == socket.id){
-           document.getElementById('nameText').innerHTML = "Name: " + data[i].name;
-           document.getElementById('scoreText').innerHTML = "Score: " + data[i].gameData.score;
+           document.getElementById('nameText').innerHTML = "اسم: " + data[i].name;
+           document.getElementById('scoreText').innerHTML = "امتیاز: " + data[i].gameData.score;
        }
    }
 });
@@ -98,6 +98,6 @@ socket.on('GameOver', function(){
     document.getElementById('answer3').style.visibility = "hidden";
     document.getElementById('answer4').style.visibility = "hidden";
     document.getElementById('message').style.display = "block";
-    document.getElementById('message').innerHTML = "GAME OVER";
+    document.getElementById('message').innerHTML = "پایان بازی";
 });
 
