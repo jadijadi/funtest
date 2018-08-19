@@ -40,6 +40,7 @@ socket.on('questionOver', function(playerData, correct){
     var answer4 = 0;
     var total = 0;
     //Hide elements on page
+    document.getElementById('questionNum').style.display = "none";
     document.getElementById('playersAnswered').style.display = "none";
     document.getElementById('timerText').style.display = "none";
     
