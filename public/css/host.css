@@ -25,6 +25,7 @@ body {
     animation: bgcolor 10s infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
+    direction: rtl; 
 }
 #title{
     color:white;
