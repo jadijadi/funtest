@@ -24,12 +24,12 @@ socket.on('gameQuestions', function(data){
     document.getElementById('answer3').innerHTML = data.a3;
     document.getElementById('answer4').innerHTML = data.a4;
     var correctAnswer = data.correct;
-    document.getElementById('playersAnswered').innerHTML = "Players Answered 0 / " + data.playersInGame;
+    document.getElementById('playersAnswered').innerHTML = "فعلا صفر از " + data.playersInGame;
     updateTimer();
 });
 
 socket.on('updatePlayersAnswered', function(data){
-   document.getElementById('playersAnswered').innerHTML = "Players Answered " + data.playersAnswered + " / " + data.playersInGame; 
+   document.getElementById('playersAnswered').innerHTML = "فعلا " + data.playersAnswered + " جواب از " + data.playersInGame; 
 });
 
 socket.on('questionOver', function(playerData, correct){
@@ -143,7 +143,7 @@ socket.on('GameOver', function(data){
     document.getElementById('answer3').style.display = "none";
     document.getElementById('answer4').style.display = "none";
     document.getElementById('timerText').innerHTML = "";
-    document.getElementById('question').innerHTML = "GAME OVER";
+    document.getElementById('question').innerHTML = "پایان بازی";
     document.getElementById('playersAnswered').innerHTML = "";
     
     

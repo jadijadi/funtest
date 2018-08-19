@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Host | KahootClone</title>
+        <title>فان تست | اوستا</title>
         <link rel = "stylesheet" href = "../css/host.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
     </head>
     <body>
-        <button id = "cancel" onclick = "endGame()">Cancel Game</button>
-        <h2 id = "title">Join this Game using the Game Pin: </h2>
+        <button id = "cancel" onclick = "endGame()">لغو بازی</button>
+        <h2 id = "title">برای پیوستن به این بازی، از کد زیر استفاده کنید:</h2>
         <h1 id = "gamePinText"></h1>
         <textarea style = "width: 700px; height: 500px;" readonly id = 'players'></textarea>
         <br>
-        <button id = 'start' onclick = "startGame()">Start Game</button>
+        <button id = 'start' onclick = "startGame()">شروع بازی</button>
         <br>
         <br>
         <script src = "../socket.io/socket.io.js"></script>
